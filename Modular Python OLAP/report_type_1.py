@@ -65,7 +65,7 @@ def generate_report(main_window):
             FROM appointments a
             JOIN clinics c ON a.clinicid = c.clinicid
             WHERE c.{selected_type} = '{selected_value}'
-            GROUP BY c.RegionName;
+            GROUP BY c.{selected_type};
         """
 
         # Measure the time elapsed during report generation
